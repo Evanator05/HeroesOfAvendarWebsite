@@ -60,6 +60,11 @@ ul {
 	color: #2898FF;
 }
 
+p {
+  background-color: darkblue;
+  border-radius: 15px;
+}
+
 /*Footer*/
 footer {
 	text-align: center;
