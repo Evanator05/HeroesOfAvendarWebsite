@@ -15,7 +15,7 @@ function drawGraph() {
   ctx.fillRect(0, 0, width, height);
 
   //the final level the graph will reach
-  var steps = 15
+  var steps = 20
 
   var widthsteps = width/steps
 
@@ -27,29 +27,32 @@ function drawGraph() {
   ctx.lineWidth=5
   ctx.lineCap = "round";
   ctx.beginPath();
-  ctx.moveTo(0,0);
+  ctx.moveTo(0,(70 - height));
   for (let i = 0; i < steps; i++) {
     //plot points based on this quadradic 2(level)^2+70
-    ctx.lineTo((widthsteps*i),70 + (2*((i-1)*(i-1)))-height)
-    console.log((widthsteps*i),70 + (2*((i-1)*(i-1)))-height)
+    ctx.lineTo((widthsteps*i),getXp(i)-height)
   }
   ctx.stroke();
 
   let level = document.getElementById("level").value
 
+  //Draw point
   ctx.fillStyle="red"
   ctx.strokeStyle="red"
   ctx.beginPath();
-  ctx.arc(widthsteps*level, 70 + (2*((level-1)*(level-1)))-height, 5, 0, 2 * Math.PI);
+  ctx.arc(widthsteps*level, getXp(level)-height, 5, 0, 2 * Math.PI);
   ctx.stroke();
   ctx.fill()
-
 }
 
 function pressedButton() {
   let level = document.getElementById("level").value;
-  document.getElementById("ans").innerHTML = 70 + (2*((level-1)*(level-1)));
+  document.getElementById("ans").innerHTML = getXp(level);
   drawGraph()
+}
+
+function getXp(level) {
+  return (70 + (2*((level-1)*(level-1))))
 }
 
 main()
