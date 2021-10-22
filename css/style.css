@@ -78,13 +78,6 @@ footer {
   margin: 0 auto;
 }
 
-.logo {
-  float: left;
-  width: 10%;
-  padding-top: 10px;
-}
-
-
 .container {
 	width: 80%;
 	margin: 0 auto;
@@ -102,6 +95,7 @@ header::after {
 
 .logo {
   float: left;
+  width: 5%;
   padding: 10px 0;
 }
 
