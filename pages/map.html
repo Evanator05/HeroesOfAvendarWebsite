@@ -2,9 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Map</title>
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
+    <nav>
+      <a href="../index.html"><button type="button" name="button">Home</button></a>
+    </nav>
+    <h1>The Map</h1>
+    <img src="../images/labledMap.png" alt="Game Map">
 
+    <p>This map is the area you play the game in <br> Use this drop down box to read on what each thing does</p>
+    <select onchange="updateDesc()" value="1" name="map" id="map" multiple size="5">
+      <option selected value="0">Team Base</option>
+      <option value="1">Minion Spawner</option>
+      <option value="2">Tower</option>
+      <option value="3">Jungle</option>
+    </select>
+
+    <p id="ans"></p>
+    <script type="text/javascript" src="../scr/map.js"></script>
   </body>
 </html>
