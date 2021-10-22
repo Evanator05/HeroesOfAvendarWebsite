@@ -4,11 +4,11 @@ function main() {
 }
 
 function drawGraph() {
-  let canvas = document.getElementById("canvas");
-  let ctx = canvas.getContext("2d");
+  let canvas = document.getElementById("canvas"); //Get the canvas element so I can draw to it
+  let ctx = canvas.getContext("2d"); //Get the canvas context so I can draw to the canvas
 
-  var width = canvas.width
-  var height = canvas.height
+  var width = canvas.width; //Get the canvas width
+  var height = canvas.height; //Get the canvas height
 
   //filll background
   ctx.fillStyle="white"
@@ -17,6 +17,7 @@ function drawGraph() {
   //the final level the graph will reach
   var steps = 15
 
+  //Get the amount of pixels per step
   var widthsteps = width/steps
 
   //invert the canvas
@@ -35,8 +36,9 @@ function drawGraph() {
   }
   ctx.stroke();
 
-  let level = document.getElementById("level").value
+  let level = document.getElementById("level").value //Get the level chosen by the user
 
+  //Draw a red point at a position chosen by the users level
   ctx.fillStyle="red"
   ctx.strokeStyle="red"
   ctx.beginPath();
@@ -47,7 +49,7 @@ function drawGraph() {
 }
 
 function pressedButton() {
-  let level = document.getElementById("level").value;
+  let level = document.getElementById("level").value; //Get the level chosen by the user
   document.getElementById("ans").innerHTML = 70 + (2*((level-1)*(level-1)));
   drawGraph()
 }
