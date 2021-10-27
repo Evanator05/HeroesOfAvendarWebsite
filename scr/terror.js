@@ -4,6 +4,6 @@ function updateTextBox() {
   audio.play(); // Play the audio object
   let text = document.getElementById("response").value
   if (text == password) {
-      window.location.replace("../pages/redRoom.html")//change to the horror site
+      window.location.replace("../pages/location.html")//change to the horror site
   }
 }
