@@ -4,7 +4,6 @@ function pressedButton() {
   } else {
     console.log("geolocation not supported"); //otherwise log that the browser isnt supported
   }
-
 }
 
 function acceptGeolocation() {//function for when user accepts geolocation
