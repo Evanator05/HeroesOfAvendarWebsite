@@ -23,7 +23,7 @@ function breakTower() {
   var audio = new Audio("../audio/TowerCrumbling.wav"); //Create a new audio object with a tower breaking sound effect
   audio.play(); // Play the audio object
 
-  document.getElementById("promoCode").innerHTML = makePromocode(8) //Set the promocode element html to a random string of 8 characters
+  document.getElementById("promoCode").innerHTML = "xB3YxZ" //Set the promocode element html to a random string of 8 characters
 }
 
 function generateRandomCharacter() { //Get 1 random character
