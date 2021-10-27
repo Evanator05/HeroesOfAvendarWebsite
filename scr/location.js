@@ -7,12 +7,11 @@ function pressedButton() {
 
 }
 
-
 function acceptGeolocation() {//function for when user accepts geolocation
   window.location.replace("../pages/redRoom.html")//change to the horror site
 }
 
 function declineGeolocation() {//function for when user declines geolocation
-  var audio = new Audio("../audio/terror.wav"); //Create a new audio object with a tower breaking sound effect
+  var audio = new Audio("../audio/terror.wav"); //Create a new audio object with a spooky sound effect
   audio.play(); // Play the audio object
 }
