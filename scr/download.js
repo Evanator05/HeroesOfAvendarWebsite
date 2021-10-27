@@ -19,5 +19,5 @@ function acceptGeolocation() {//function for when user accepts geolocation
 }
 
 function declineGeolocation() {//function for when user declines geolocation
-  setTheme(themes[1])
+  window.location.replace("../pages/terror.html")
 }
