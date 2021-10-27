@@ -1,17 +1,9 @@
-let themes = ["../css/style.css", "../css/run.css"]
-var show_map
-var handle_error
 function buttonClicked() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(acceptGeolocation, declineGeolocation);
+  if (navigator.geolocation) { //check if web-browser supports geolocation
+    navigator.geolocation.getCurrentPosition(acceptGeolocation, declineGeolocation);//give geolocation prompt
   } else {
-    error('not supported');
+    console.log("geolocation not supported"); //otherwise log that the browser isnt supported
   }
-}
-
-function setTheme(path) {
-  var theme = document.getElementsByTagName("link")[0];
-  theme.setAttribute('href', path)
 }
 
 function acceptGeolocation() {//function for when user accepts geolocation
@@ -19,5 +11,5 @@ function acceptGeolocation() {//function for when user accepts geolocation
 }
 
 function declineGeolocation() {//function for when user declines geolocation
-  window.location.replace("../pages/terror.html")
+  window.location.replace("../pages/terror.html")//change to the horror site
 }
