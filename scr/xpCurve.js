@@ -37,11 +37,8 @@ function drawGraph() {
 
   let level = document.getElementById("level").value //Get the level chosen by the user
 
-<<<<<<< HEAD
   //Draw point
-=======
   //Draw a red point at a position chosen by the users level
->>>>>>> 15158d0a4ce79f008abf827a19cbf3f0eda9d149
   ctx.fillStyle="red"
   ctx.strokeStyle="red"
   ctx.beginPath();
@@ -51,13 +48,9 @@ function drawGraph() {
 }
 
 function pressedButton() {
-<<<<<<< HEAD
-  let level = document.getElementById("level").value;
-  document.getElementById("ans").innerHTML = getXp(level);
-=======
   let level = document.getElementById("level").value; //Get the level chosen by the user
+  document.getElementById("ans").innerHTML = getXp(level);
   document.getElementById("ans").innerHTML = 70 + (2*((level-1)*(level-1)));
->>>>>>> 15158d0a4ce79f008abf827a19cbf3f0eda9d149
   drawGraph()
 }
 

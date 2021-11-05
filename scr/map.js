@@ -5,10 +5,8 @@ var text = ["The team base is the place where you respawn after death, you also 
 "The Jungle is a place for the person in Roamer role to farm for xp. The problem with Jungle is there are no Towers to protect you leaving you vulnerable to enemy attacks. Once every 5 minutes a monster spawns in the middle that once killed gives the killing team a buff to their stats"]
 
 function updateDesc() {
-
   let selectedOption = document.getElementById("map").value  //returns a number from 0-3, used to access the text array
   document.getElementById("ans").innerHTML = text[selectedOption] //set the text on the page to the text in an array index
-
 }
 
 //run it on launch to set default text
